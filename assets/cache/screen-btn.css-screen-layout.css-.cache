@@ -1,0 +1,99 @@
+html *,* {
+margin:10px;
+padding:0
+}
+
+body {
+font-family:Verdana, sans-serif;
+font-size:11px;
+background-color:#ddd;
+margin:0
+}
+
+h1 {
+color:#fe0000;
+font-size:21px
+}
+
+p {
+color:orange;
+font-size:17px
+}
+
+A:link:hover,:visited:hover {
+text-decoration:underline;
+color:#06F
+}
+
+.mkt {
+margin:-15px 0 0
+}
+
+.clear {
+clear:left
+}
+
+.frame {
+position:absolute
+}
+
+.marquee {
+background:url(images/sfx1_bg.gif) bottom repeat-x;
+margin:0;
+padding:0
+}
+
+.marquee_l {
+background:url(images/sfx1_bga.gif) bottom left no-repeat;
+margin:auto 0;
+padding:0 15px 10px
+}
+
+.marquee_copy {
+margin:0 0 10px;
+padding:0
+}
+
+.marquee_copy h3 {
+font-size:100%;
+margin:0;
+padding:0
+}
+
+.marquee_r {
+background:url(images/sfx1_bgb.gif) bottom no-repeat;
+width:327px;
+text-align:center
+}
+
+.marquee_rb {
+background:url(images/sfx1_bgc.gif) bottom no-repeat
+}
+
+.marquee_rb ul {
+height:28px;
+text-align:center;
+margin:0;
+padding:0
+}
+
+.marquee_rb li {
+position:relative;
+font-size:85%;
+font-weight:700;
+display:inline;
+list-style:none;
+background:url(images/sfx1_bullet.gif) 0 2px no-repeat;
+margin:0 10px 0 0;
+padding:0 0 0 12px
+}
+
+.marquee_stats {
+font-size:85%;
+padding:0 0 0 15px
+}
+
+A:link,A:visited,A:link:active,:visited:active {
+text-decoration:none
+}
+

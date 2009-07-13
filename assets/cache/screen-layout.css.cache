@@ -1,0 +1,18 @@
+ A:link { text-decoration:none; }
+  A:visited { text-decoration:none; }
+  A:link:active,:visited:active { text-decoration:none; }
+  A:link:hover,:visited:hover { text-decoration:underline; color:#0066FF; }
+
+.mkt {margin: -15px 0 0 0;}
+.clear { clear: left; }
+.frame {position: absolute;}
+.marquee { background: url(images/sfx1_bg.gif) bottom repeat-x; padding: 0; margin: 0;}
+.marquee_l { background: url(images/sfx1_bga.gif) bottom left no-repeat; margin: auto 0; padding: 0 15px 10px 15px; }
+.marquee_copy { margin: 0 0 10px 0; padding: 0;}
+.marquee_copy h3 { font-size: 100%; margin: 0; padding: 0; }
+.marquee_r { background: url(images/sfx1_bgb.gif) bottom no-repeat; width: 327px; text-align: center;}
+.marquee_rb { background: url(images/sfx1_bgc.gif) bottom no-repeat;}
+.marquee_rb ul {height: 28px; padding: 0; margin: 0; text-align: center;}
+.marquee_rb li {position: relative; font-size: 85%; font-weight: bold; display: inline; list-style: none; background: url(images/sfx1_bullet.gif) 0 2px no-repeat; padding: 0 0 0 12px; margin: 0 10px 0 0;}
+
+.marquee_stats { padding: 0 0 0 15px; font-size: 85%; }

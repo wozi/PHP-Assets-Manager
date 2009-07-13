@@ -1,0 +1,23 @@
+html *,* {
+margin:10px;
+padding:0
+}
+
+body {
+font-family:Verdana, sans-serif;
+font-size:11px;
+font-color:#fe0000;
+margin:0
+}
+
+h1 {
+color:#fe0000;
+font-size:21px
+}
+
+p {
+color:orange;
+font-size:17px;
+background-color:#fff
+}
+

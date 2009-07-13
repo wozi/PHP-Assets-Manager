@@ -1,0 +1,93 @@
+PHP Asset Manager is a simple tool that let you use multiple CSS/JS files and call them all at once. 
+CSS are recompressed using CSSTidy, and JS as well by using JSMIN. 
+
+Created by Nicolas Wozniak
+Version 1.0.2.1 - 13/07/2009 -> 14/12/2008
+http://github.com/wozi/php-assets-manager
+
+
+Current version 1.0.2.1 supports:
+- CSS compression
+- JS compression
+- Multiple versions
+- Unknown type inclusion
+- CSS @variables
+
+
+Usage:
+	The call is made using <link rel="/ap/screen" media="screen" />
+	Where /ap/ is a special directory used which will be taken care of by the AssetPackager.
+	screen is the name of the file we need. This one is defined in the config file as
+		 stylesheets:
+			screen:
+			files: ../css/screen-btn.css
+			# Different versions of the same file
+			versions:
+				1.1:
+					files: ../css/screen-btn.css
+	
+	At the first call, one single css will be tidied and merge into one that will be cached in the CACHE $dir.
+	The script will then send the compacted file. The file will not move until one of the file of the package is modified. It
+	will be repackaged then.
+
+	JavaScript files can be used the same way. They just have to be defined in the javascript array in the config file.
+		 javascripts:
+			highslide:
+			files: ../js/highslide.js
+			versions:
+				1.1:
+					files: ../js/highslide11.js
+				1.2:
+					files: ../js/highslide12.js
+
+	Versionning:
+	You can also gives a version number to your CSS while calling it using the ?v parameter.
+	If you have more than one version for one package, the version asked will be delivered.
+	config.yml:
+		 stylesheets:
+			screen:
+			files: ../css/screen-btn.css
+			# Different versions of the same file
+			versions:
+				1.1:
+					files: ../css/screen-btn.css
+		  
+		 javascripts:
+			highslide:
+			files: ../js/highslide.js
+			versions:
+				1.1:
+					files: ../js/highslide11.js
+				1.2:
+					files: ../js/highslide12.js
+	Call:
+		<link rel="/ap/screen?1.2" media="screen" />
+	Will deliver the up to date version.
+
+	CSS / JavaScript compression & Other types of files:
+	By default, the CSS & JS files are compressed. You can disable it by specifying in the config file the new value:
+	config.yml:
+		compressJS: false
+		compressCSS: false
+		
+	You can also use other types of files that re not CSS or JS. In that case no compression will be applied. 
+	Just create a new section at the same level as stylesheets and javascripts in the asset_packager.yml config file.
+	 myset:
+		nico:
+		files: ../js/test.txt
+		
+		
+	superCSS:
+ 	We now support in version 1.0.2 variables in stylesheets. Variables are declared this way, in any part of your CSS file:
+ 	@myVar = 12px;
+ 	(just be careful to always use a ; at the end)
+	
+	Variables can also be defined using he : operator:
+	@myVar : 12px;
+	
+	Just choose the one you like.
+ 
+ 	Then you can just use it anywhere by calling it:
+ 	font-size: @myVar;
+ 
+ 	This is a primary support, more functions with variables will be added in the next version.

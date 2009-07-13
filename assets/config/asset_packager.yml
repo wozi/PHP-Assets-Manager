@@ -1,0 +1,21 @@
+assets:
+ stylesheets:
+  screen:
+   files: [../css/screen-btn.css, ../css/screen-layout.css]
+   # Different versions of the same file
+   versions:
+    1.1:
+     files: ../css/screen-btn.css
+  
+ javascripts:
+  highslide:
+   files: ../js/highslide.js
+   versions:
+    1.1:
+     files: ../js/highslide11.js
+    1.2:
+     files: ../js/highslide12.js
+ 
+ myset:
+  nico:
+   files: ../js/test.txt

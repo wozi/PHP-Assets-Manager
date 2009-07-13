@@ -1,0 +1,32 @@
+/**
+ *	screen-btn.css
+ *	@author Nicolas Wozniak
+ *	@version 1.1
+ */
+@myVar = 17px;
+@red = #fe0000;
+
+@white : #fff;
+
+
+html *, * {
+	padding: 0;
+	margin: 10px;
+}
+body {
+	margin: 0;
+	font-family: Verdana, sans-serif;
+	font-size: 11px;	
+	font-color: @red;
+}
+h1 {
+	color: @red;
+	font-size: 21px;
+}
+
+
+p {
+	color: orange;
+	font-size: @myvar;
+	background-color: @white;
+}

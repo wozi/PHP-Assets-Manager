@@ -1,0 +1,5 @@
+cache_dir: cache/
+assets: config/asset_packager.yml
+# Compress options are set to true by default if not defined here
+compressJS: true
+compressCSS: true
